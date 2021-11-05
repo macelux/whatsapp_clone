@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_clone/screens/home.dart';
+import 'package:whatsapp_clone/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xff075E54),
         accentColor: Color(0xff25D366),
       ),
-      home: const Home(),
+      home: const HomeScreen(),
     );
   }
 }
