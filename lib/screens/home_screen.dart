@@ -40,10 +40,38 @@ class _HomeScreenState extends State<HomeScreen>
             Tab(text: "CALLS"),
           ],
         ),
-        actions: const <Widget>[
+        actions: <Widget>[
           Icon(Icons.search),
-          SizedBox(width: 4),
-          Icon(Icons.more_vert),
+          // Icon(Icons.more_vert),
+          PopupMenuButton<String>(
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(
+                  child: Text("New Group"),
+                  value: "New group",
+                ),
+                PopupMenuItem(
+                  child: Text("New Broadcast"),
+                  value: "New Broadcast",
+                ),
+                PopupMenuItem(
+                  child: Text("Whatsapp Web"),
+                  value: "Whatsapp Web",
+                ),
+                PopupMenuItem(
+                  child: Text("Starred Message"),
+                  value: "Starred Messageb",
+                ),
+                PopupMenuItem(
+                  child: Text("Settings"),
+                  value: "settings",
+                ),
+              ];
+            },
+            onSelected: (value) {
+              print(value);
+            },
+          ),
         ],
       ),
       body: TabBarView(
